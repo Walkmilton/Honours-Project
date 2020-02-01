@@ -1,3 +1,23 @@
+<?php
+
+		$servername = "localhost";
+    $usernameDB = "debian-sys-maint";
+    $passwordDB = "eQjGVhoh45rtUwom";
+    $dbname = "honours";
+
+
+$conn = new mysqli($servername, $usernameDB, $passwordDB, $dbname);
+
+   if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+$face;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -30,10 +50,11 @@
 		</div>
 
 
+		<form action="Question.php" method="post">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
-                <a href="Questions.html"><p>🙂</p></a>
+				<p><button name="happyButton" value="Happy" type="submit">🙂</button></p>
 			</div>
 			<div class="col"></div>
 		</div>
@@ -41,7 +62,7 @@
 			<div class="row">
 				<div class="col"></div>
 				<div class="col">
-                    <a href="Questions.html"><p>😐</p></a>
+					<p><button name="mediumButton" value="Medium" type="submit">😐</button></p>
 				</div>
 				<div class="col"></div>
 			</div>
@@ -49,10 +70,11 @@
 			<div class="row">
 				<div class="col"></div>
 				<div class="col">
-                    <a href="Questions.html"><p>🙁</p></a>
+					<p><button name="sadButton" value="Sad" type="submit">🙁</button></p>
 				</div>
 				<div class="col"></div>
 			</div>
+			</form>
 		
 
 

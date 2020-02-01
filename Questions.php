@@ -1,3 +1,27 @@
+<?php
+
+		$servername = "localhost";
+    $usernameDB = "debian-sys-maint";
+    $passwordDB = "eQjGVhoh45rtUwom";
+    $dbname = "honours";
+
+
+$conn = new mysqli($servername, $usernameDB, $passwordDB, $dbname);
+
+   if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+if (isset($_POST['happyButton'])) {
+    $feeling = "happy";
+} else if (isset($_POST['mediumButton'])) {
+   $feeling = "medium";
+} else if (isset($_POST['sadButton'])) {
+		$feeling = "sad";
+} else {
+    //no button pressed
+}
+
 <!DOCTYPE html>
 <html>
 
