@@ -22,6 +22,7 @@ if (isset($_POST['happyButton'])) {
     //no button pressed
 }
 
+?>
 <!DOCTYPE html>
 <html>
 
