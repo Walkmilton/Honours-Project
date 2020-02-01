@@ -50,7 +50,7 @@ $face;
 		</div>
 
 
-		<form action="Question.php" method="post">
+		<form action="Questions.php" method="post">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
