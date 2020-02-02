@@ -2,6 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['submitted'])){
+    echo 'test';
     echo "<script>$('#thankYou').modal('show');</script>";
     session_unset(); 
 }
