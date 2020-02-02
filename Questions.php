@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+$_SESSION['feeling'];
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -22,10 +25,13 @@ $conn = new mysqli($servername, $usernameDB, $passwordDB, $dbname);
 
 if (isset($_POST['happyButton'])) {
     $feeling = "happy";
+    $_SESSION['feeling'] = $feeling;
 } else if (isset($_POST['mediumButton'])) {
    $feeling = "medium";
+    $_SESSION['feeling'] = $feeling;
 } else if (isset($_POST['sadButton'])) {
 		$feeling = "sad";
+    $_SESSION['feeling'] = $feeling;
 } else {
     //no button pressed
 }
@@ -34,8 +40,7 @@ if (isset($_POST['happyButton'])) {
 $stmt = $conn->prepare("INSERT INTO opinions (Face, Why, More, Opinion) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $feeling, $explanation, $comment, $opinion);
 
-
-//$feeling = "test";
+$feeling = $_SESSION['feeling'];
 $explanation = test_input($_POST['feelText']);
 $comment = test_input($_POST['moreText']);
 $opinion = test_input($_POST['changeText']);
