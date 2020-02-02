@@ -31,7 +31,7 @@ if (isset($_POST['happyButton'])) {
 }
 
 
-
+$feeling = "test";
 $explanation = test_input($_POST['feelText']);
 $comment = test_input($_POST['moreText']);
 $change = test_input($_POST['changeText']);
