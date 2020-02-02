@@ -37,7 +37,7 @@ $comment = test_input($_POST['moreText']);
 $change = test_input($_POST['changeText']);
 
  if(isset($_POST['submit'])) {
-     $sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Change?') VALUES ($feeling,$explanation,$comment,$change)";
+     $sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Change?') VALUES ('$feeling','$explanation','$comment','$change')";
 
      
      if ($conn->query($sqlAdd) === TRUE) {
@@ -87,7 +87,7 @@ $change = test_input($_POST['changeText']);
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="feelText"></textarea>
+						<textarea class="form-control" rows="4" name="feelText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
@@ -105,7 +105,7 @@ $change = test_input($_POST['changeText']);
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="moreText"></textarea>
+						<textarea class="form-control" rows="4" name="moreText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
@@ -123,7 +123,7 @@ $change = test_input($_POST['changeText']);
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="changeText"></textarea>
+						<textarea class="form-control" rows="4" name="changeText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
