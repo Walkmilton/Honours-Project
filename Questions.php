@@ -38,7 +38,11 @@ $change = test_input($_POST['changeText']);
 
  if(isset($_POST['submit'])) {
      $sqlAdd = "INSERT INTO opinions (Face, Why, More, Change?) VALUES ('$feeling', '$explanation', '$comment', '$change')";
+     
+     $conn->query($sqlAdd);
  }
+
+
 
 ?>
 <!DOCTYPE html>
