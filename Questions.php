@@ -52,7 +52,6 @@ if (isset($_POST['happyButton'])) {
 					<div class="col"></div>
 					<div class="col">
 						<p id="text">Why did you feel this way?</p>
-						<?php echo $feeling ?>
 					</div>
 					<div class="col"></div>
 				</div>
