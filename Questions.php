@@ -45,12 +45,12 @@ $opinion = test_input($_POST['changeText']);
      //$sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Opinion') VALUES ('$feeling','$explanation','$comment','$opinion')";
      
      $stmt->execute();     
-     
-     if ($conn->query($sqlAdd) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+     $stmt->close();
+//     if ($conn->query($sqlAdd) === TRUE) {
+//    echo "New record created successfully";
+//} else {
+//    echo "Error: " . $sql . "<br>" . $conn->error;
+//}
      
  }
 
