@@ -99,11 +99,11 @@ $opinion = test_input($_POST['changeText']);
                 </div>
 
                 <div class="row">
-                    <div class="col"></div>
+                   
                     <div class="col">
                         <textarea class="form-control" rows="4" name="feelText"></textarea>
                     </div>
-                    <div class="col"></div>
+                  
                 </div>
             </div>
 
@@ -117,11 +117,11 @@ $opinion = test_input($_POST['changeText']);
                 </div>
 
                 <div class="row">
-                    <div class="col"></div>
+                    
                     <div class="col">
                         <textarea class="form-control" rows="4" name="moreText"></textarea>
                     </div>
-                    <div class="col"></div>
+                    
                 </div>
             </div>
 
@@ -135,11 +135,11 @@ $opinion = test_input($_POST['changeText']);
                 </div>
 
                 <div class="row">
-                    <div class="col"></div>
+                    
                     <div class="col">
                         <textarea class="form-control" rows="4" name="changeText"></textarea>
                     </div>
-                    <div class="col"></div>
+                    
                 </div>
             </div>
 
