@@ -38,8 +38,14 @@ $change = test_input($_POST['changeText']);
 
  if(isset($_POST['submit'])) {
      $sqlAdd = "INSERT INTO opinions (Face, Why, More, Change?) VALUES ('$feeling', '$explanation', '$comment', '$change')";
+
      
-     $conn->query($sqlAdd);
+     if ($conn->query($sqlAdd) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+     
  }
 
 
