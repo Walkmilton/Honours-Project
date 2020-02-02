@@ -1,6 +1,14 @@
 <?php
 
-		$servername = "localhost";
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+
+    $servername = "localhost";
     $usernameDB = "debian-sys-maint";
     $passwordDB = "eQjGVhoh45rtUwom";
     $dbname = "honours";
@@ -21,6 +29,16 @@ if (isset($_POST['happyButton'])) {
 } else {
     //no button pressed
 }
+
+
+
+$explanation = test_input($_POST['feelText']);
+$comment = test_input($_POST['moreText']);
+$change = test_input($_POST['changeText']);
+
+ if(isset($_POST['submit'])) {
+     $sqlAdd = "INSERT INTO opinions (Face, Why, More, Change?) VALUES ('$feeling', '$explanation', '$comment', '$change')";
+ }
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +64,7 @@ if (isset($_POST['happyButton'])) {
 <body>
 	<div id="background">
 
-		<form action="index.html">
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<div class="form-group">
 				<div class="row">
 					<div class="col"></div>
@@ -59,7 +77,7 @@ if (isset($_POST['happyButton'])) {
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="feel"></textarea>
+						<textarea class="form-control" rows="4" id="feelText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
@@ -77,7 +95,7 @@ if (isset($_POST['happyButton'])) {
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="more"></textarea>
+						<textarea class="form-control" rows="4" id="moreText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
@@ -95,7 +113,7 @@ if (isset($_POST['happyButton'])) {
 				<div class="row">
 					<div class="col"></div>
 					<div class="col">
-						<textarea class="form-control" rows="4" id="change"></textarea>
+						<textarea class="form-control" rows="4" id="changeText"></textarea>
 					</div>
 					<div class="col"></div>
 				</div>
