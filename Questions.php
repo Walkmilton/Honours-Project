@@ -1,7 +1,9 @@
 <?php
-
 session_start();
+
 $_SESSION['feeling'];
+
+
 
 function test_input($data) {
     $data = trim($data);
@@ -51,6 +53,9 @@ $opinion = test_input($_POST['changeText']);
      
      $stmt->execute();     
      $stmt->close();
+     $_SESSION['submitted'] = true;
+     header("Location:index.php");
+     
 //     if ($conn->query($sqlAdd) === TRUE) {
 //    echo "New record created successfully";
 //} else {
@@ -143,36 +148,12 @@ $opinion = test_input($_POST['changeText']);
             <div class="row" id="bottomButton">
                 <div class="col"></div>
                 <div class="col">
-                    <button type="submit" class="btn btn-success btn-block" name="submit" data-toggle="modal" data-target="#thankYou">Enter</button>
+                    <button type="submit" class="btn btn-success btn-block" name="submit">Enter</button>
                 </div>
                 <div class="col"></div>
             </div>
 
         </form>
-
-        <div class="modal" id="thankYou">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Thank You!</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        Thank you for submitting a responce. Your input makes this project possible.
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
     </div>
 </body>
