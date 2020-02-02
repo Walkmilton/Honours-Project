@@ -71,8 +71,8 @@ $opinion = test_input($_POST['changeText']);
 
 <head>
     <meta charset="utf-8">
-    <title>Honours Project</title>
-    <meta name="description" content="Honours Project">
+    <title>Tell us more</title>
+    <meta name="description" content="Tell us more">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Latest compiled and minified CSS -->
