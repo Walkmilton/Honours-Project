@@ -1,7 +1,9 @@
 <?php
-
+session_start();
 header( "refresh:10;url=index.php" );
 
+
+session_destroy();
 ?>
 
 <!DOCTYPE html>

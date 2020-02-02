@@ -92,11 +92,10 @@ $opinion = test_input($_POST['changeText']);
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
             <div class="form-group">
                 <div class="row">
-                    <div class="col"></div>
                     <div class="col">
                         <p id="text">Why did you feel this way?</p>
                     </div>
-                    <div class="col"></div>
+                  
                 </div>
 
                 <div class="row">
@@ -110,11 +109,11 @@ $opinion = test_input($_POST['changeText']);
 
             <div class="form-group">
                 <div class="row">
-                    <div class="col"></div>
+                    
                     <div class="col">
                         <p id="text">Tell us more</p>
                     </div>
-                    <div class="col"></div>
+                   
                 </div>
 
                 <div class="row">
@@ -128,11 +127,11 @@ $opinion = test_input($_POST['changeText']);
 
             <div class="form-group">
                 <div class="row">
-                    <div class="col"></div>
+                
                     <div class="col">
                         <p id="text">What would you change?</p>
                     </div>
-                    <div class="col"></div>
+                
                 </div>
 
                 <div class="row">
@@ -145,11 +144,11 @@ $opinion = test_input($_POST['changeText']);
             </div>
 
             <div class="row" id="bottomButton">
-                <div class="col"></div>
+            
                 <div class="col">
                     <button type="submit" class="btn btn-success btn-block" name="submit">Enter</button>
                 </div>
-                <div class="col"></div>
+               
             </div>
 
         </form>
