@@ -35,7 +35,7 @@ $stmt = $conn->prepare("INSERT INTO opinions (Face, Why, More, Opinion) VALUES (
 $stmt->bind_param("ssss", $feeling, $explanation, $comment, $opinion);
 
 
-//$feeling = "test";
+$feeling = "test123";
 $explanation = test_input($_POST['feelText']);
 $comment = test_input($_POST['moreText']);
 $opinion = test_input($_POST['changeText']);
