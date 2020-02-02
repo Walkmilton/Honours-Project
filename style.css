@@ -30,3 +30,8 @@ h1 {
 	padding-bottom: 10%;
 	
 }
+
+#input {
+    padding-left: 1px;
+    padding-right: 1px;
+}
