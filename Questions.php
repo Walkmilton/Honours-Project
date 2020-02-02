@@ -37,7 +37,7 @@ $comment = test_input($_POST['moreText']);
 $change = test_input($_POST['changeText']);
 
  if(isset($_POST['submit'])) {
-     $sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Change?') VALUES ('$feeling','$explanation','$comment','$change')";
+     $sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Change?') VALUES ($feeling,$explanation,$comment,$change)";
 
      
      if ($conn->query($sqlAdd) === TRUE) {
