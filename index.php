@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['submitted'])){
-    echo 'test';
-    echo "<script>$('#thankYou').modal('show');</script>";
-    session_unset(); 
-}
-
 
 
     $servername = "localhost";
@@ -83,31 +77,6 @@ $conn = new mysqli($servername, $usernameDB, $passwordDB, $dbname);
 			</div>
 			</form>
 		
-        
-        <div class="modal" id="thankYou">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Thank You!</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        Thank you for submitting a responce. Your input makes this project possible.
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
 
 	</div>
 

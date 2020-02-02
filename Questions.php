@@ -53,7 +53,6 @@ $opinion = test_input($_POST['changeText']);
      
      $stmt->execute();     
      $stmt->close();
-     $_SESSION['submitted'] = true;
      header("Location:index.php");
      
 //     if ($conn->query($sqlAdd) === TRUE) {
