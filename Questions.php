@@ -53,7 +53,7 @@ $opinion = test_input($_POST['changeText']);
      
      $stmt->execute();     
      $stmt->close();
-     header("Location:index.php");
+     header("Location:thankyou.php");
      
 //     if ($conn->query($sqlAdd) === TRUE) {
 //    echo "New record created successfully";
