@@ -122,7 +122,7 @@ $change = test_input($_POST['changeText']);
 			<div class="row" id="bottomButton">
 				<div class="col"></div>
 				<div class="col">
-					<button type="submit" class="btn btn-success btn-block">Enter</button>
+					<button type="submit" class="btn btn-success btn-block" name="submit">Enter</button>
 				</div>
 				<div class="col"></div>
 			</div>
