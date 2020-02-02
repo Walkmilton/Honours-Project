@@ -31,14 +31,20 @@ if (isset($_POST['happyButton'])) {
 }
 
 
+$stmt = $conn->prepare("INSERT INTO opinions (Face, Why, More, Opinion) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $feeling, $explanation, $comment, $opinion);
+
+
 $feeling = "test";
 $explanation = test_input($_POST['feelText']);
 $comment = test_input($_POST['moreText']);
 $opinion = test_input($_POST['changeText']);
 
- if(isset($_POST['submit'])) {
-     $sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Opinion') VALUES ('$feeling','$explanation','$comment','$opinion')";
 
+ if(isset($_POST['submit'])) {
+     //$sqlAdd = "INSERT INTO 'opinions'('Face', 'Why', 'More', 'Opinion') VALUES ('$feeling','$explanation','$comment','$opinion')";
+     
+     $stmt->execute();     
      
      if ($conn->query($sqlAdd) === TRUE) {
     echo "New record created successfully";
