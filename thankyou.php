@@ -37,7 +37,7 @@ session_destroy();
         
            <div class="row" id="title">
             <div class="col">
-                <p>Thank you for your submission. This project would not be possible without your input. Redirecting you to the homepage...</p>
+                <p id="thankYou">Thank you for your submission. This project would not be possible without your input. Redirecting you to the homepage...</p>
             </div>
         </div>
         
