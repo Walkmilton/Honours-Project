@@ -44,8 +44,10 @@ h1 {
 	padding-top: 10%
 }
 
-.toast {
- 		position: fixed; 
+..toast {
     bottom:0%;
-		margin-left:20%;
+		left: 50%;
+    position: fixed;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
 }
