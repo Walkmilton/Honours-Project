@@ -39,3 +39,13 @@ h1 {
 #thankYou {
 	font-size: 1.5em;
 }
+
+#infoButton{
+	padding-top: 10%
+}
+
+.toast {
+ 		position: fixed; 
+    bottom:0%;
+		margin-left:20%;
+}
